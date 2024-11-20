@@ -93,7 +93,11 @@ button:hover {
     font-size: 48px;
 }
 #splash-image {
-    width: 100%;
+        max-width: 100%; /* Adjust to fit within the screen */
+        height: auto;   /* Maintain aspect ratio */
+        display: block; /* Center the image */
+        margin: 0 auto; /* Center horizontally */
+    
 }
 #splash-content p {
     font-size: 18px;
