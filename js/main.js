@@ -31,33 +31,79 @@
         });
     });
 
-    // create map
     function createMap() {
         resizeMap();
-
+    
         map = L.map("map", {
-            center: L.latLng(50.5, 30.5),
+            center: L.latLng(43.087, -89.420), // Updated to your actual site area
             zoom: 16,
             maxZoom: 18,
             minZoom: 12
         });
-        let url = document.querySelector("#map").dataset.basemap,
-            attribution = document.querySelector("#map").dataset.attribution;
-
-        // set basemap tileset
-        let basemap = L.tileLayer(url, {
+    
+        const url = document.querySelector("#map").dataset.basemap;
+        const attribution = document.querySelector("#map").dataset.attribution;
+    
+        L.tileLayer(url, {
             maxZoom: 20,
             attribution: attribution
         }).addTo(map);
-
-        // add location listener to button
+    
         document.querySelector(".location-button").addEventListener("click", getLocation);
-
-        // add stop data
+    
+        // Add stop and route data
         addRoute();
         addStops();
+    
+        // --- Custom Icons ---
+    
+        // Bathroom Icon
+        const bathroomIcon = L.icon({
+            iconUrl: 'img/bathroom_icon.png',
+            iconSize: [32, 32],
+            iconAnchor: [16, 32],
+            popupAnchor: [0, -28]
+        });
+    
+        L.marker([43.08715524550469, -89.42004117964764], { icon: bathroomIcon })
+            .addTo(map)
+            .bindPopup("<strong>Male/Female Pit Toilets</strong>");
+    
+        L.marker([43.086493635475705, -89.43341226854596], { icon: bathroomIcon })
+            .addTo(map)
+            .bindPopup("<strong>Accessible Portable Toilet</strong>");
+    
+        // Bus Stop Icon
+        const busIcon = L.icon({
+            iconUrl: 'img/bus_icon.png',
+            iconSize: [32, 32],
+            iconAnchor: [16, 32],
+            popupAnchor: [0, -28]
+        });
+    
+        L.marker([43.08644720241637, -89.4337756062254], { icon: busIcon })
+            .addTo(map)
+            .bindPopup("<strong>Lake Mendota at Eagle Heights</strong><br>63 &nbsp;&nbsp;80 &nbsp;&nbsp;84");
+        L.marker([43.08422574890911, -89.42908973662088], { icon: busIcon })
+            .addTo(map)
+            .bindPopup("<strong>University Bay at Picnic Point</strong><br>&nbsp;80 &nbsp;&nbsp;84");
+       
+        // eBike Icon
+        const ebikeIcon = L.icon({
+            iconUrl: 'img/ebike_icon.png',
+            iconSize: [32, 32],
+            iconAnchor: [16, 32],
+            popupAnchor: [0, -28]
+        });
+    
+        L.marker([43.08428650173397, -89.42869244644531], { icon: ebikeIcon })
+            .addTo(map)
+            .bindPopup("<strong>BCycle Electric Bike Stand</strong>");
+        L.marker([43.086283427334756, -89.43384852944389], { icon: ebikeIcon })
+            .addTo(map)
+            .bindPopup("<strong>BCycle Electric Bike Stand</strong>");
     }
-
+    
     // location services
     function getLocation() {
         map.locate({ setView: true, watch: true, enableHighAccuracy: true });
