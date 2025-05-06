@@ -608,3 +608,42 @@ button:hover {
     border-radius: 4px;
   }
   
+  /* Popup text content */
+.leaflet-popup-content {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;               /* Increased font size */
+    line-height: 1.8;              /* More spacing for clarity */
+    color: #1c3b2a;                /* Darker forest tone */
+    font-weight: 600;              /* Bolder text */
+    padding: 6px 10px;
+  }
+  
+  /* Paragraphs inside the popup */
+  .leaflet-popup-content p {
+    margin: 0;
+    font-style: italic;
+  }
+  
+  /* Popup container styling */
+  .leaflet-popup-content-wrapper {
+    background-color: #fffef7;     /* Cream background */
+    border: 3px solid #4a7c59;     /* Deep green border */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Arrow/tip of the popup */
+  .leaflet-popup-tip {
+    background-color: #fffef7;
+    border: 3px solid #4a7c59;
+  }
+  
+  /* Close button */
+  .leaflet-popup-close-button {
+    color: #4a7c59;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 4px 10px;
+    text-shadow: none;
+  }
+  
