@@ -237,8 +237,11 @@
         }
 
         if (props.image) {
-            let img = "<img src='img/" + props.image + "' id='stop-img'>";
-            document.querySelector("#stop-body").insertAdjacentHTML("beforeend", img);
+            let imgHTML = `
+              <div class="stop-image-frame">
+                <img src="img/${props.image}" class="stop-image" alt="${props.name}">
+              </div>`;
+            document.querySelector("#stop-body").insertAdjacentHTML("beforeend", imgHTML);
         }
 
         if (props.caption) {

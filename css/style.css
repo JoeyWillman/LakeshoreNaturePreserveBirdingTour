@@ -109,6 +109,29 @@ button:hover {
   }
   
 /* === Stop Modal Styling === */
+
+/* === Stop Modal Image Styling === */
+.stop-image-frame {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .stop-image {
+    max-width: 100%;
+    max-height: 500px;
+    border: 4px double #4a7c59; /* retro forest-green frame */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+  }
+  
+  /* Ensure modal is scrollable but fits most screens */
+  #stop-content {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
 #stop-dialogue {
     max-width: 800px;
     margin: 10vh auto;
@@ -182,8 +205,8 @@ button:hover {
   /* Close Button (X) */
   #x.btn-close {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 60px;
+    right: 60px;
     filter: invert(35%) sepia(8%) saturate(200%) hue-rotate(100deg) brightness(93%) contrast(85%);
   }
   
