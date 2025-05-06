@@ -18,85 +18,110 @@
 
     </head>
     <body>
-        <!--Splash Screen. This will pop-up at the start of the tour.-->
-        <div class="modal" id="splash-modal">
-            <div class="modal-dialog" id="splash-dialogue">
-                <div class="modal-content" id="splash-content">
-                    <div class="modal-header">
-                        <div class="col-md-10 offset-md-1 col-sm-12 col-12" id="splash-title-container">
-                        </div>
-                    </div>
-                    <div class="modal-body col-md-10 offset-md-1 col-sm-12 col-12" id="splash-body">                       
-                        <!--Title of the tour.-->
-                        <h1 id="splash-title" class="modal-title">Lakeshore Nature Preserve Birding Tour</h1>
-                        <!--Add additional content here—photos, videos, text, etc.!-->
-                        <!--Introductory text of the tour.-->
-                        <p>Welcome to the Lakeshore Nature Preserve! This 300-acre natural area on the UW-Madison campus serves as a living classroom, supporting teaching, research, and providing a space where campus and community can connect with nature. As one of campus’ most cherished features, the preserve serves as a physical link from the campus to the lake. </p>
-                        <p>A renowned birding destination, the Lakehsore Nature Preserve draws birders from near and far. In 2023 alone, 211 unique bird species were observed here. This walking tour will guide you through the preserve’s diverse habitats, offering a window into the incredible biodiversity of the Lakeshore Nature Preserve. </p>
-                        <img id="splash-image" src="img/intro.png">
-                        <p></p>
-                        <!--Button to start the tour.-->
-                        <button type="button" id="start" class="btn btn-secondary" data-bs-dismiss="modal">Start Tour</button>
-                    </div>
-                </div>
-            </div>
-        </div>    
+  
+      <!-- Splash Screen: This will pop up at the start of the tour -->
+<div class="modal" id="splash-modal">
+  <div class="modal-dialog" id="splash-dialogue">
+    <div class="modal-content" id="splash-content">
+      <div class="modal-body" id="splash-body">
 
-        <!--Splash Screen. This will pop-up at the start of the tour.-->
-        <div class="modal" id="resources-modal"  tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
-          <div class="modal-dialog" id="resources-dialogue">
-              <div class="modal-content" id="resources-content">
-                  <div class="modal-header">
-                      <div class="col-md-10 offset-md-1 col-sm-12 col-12" id="resources-title-container">
-                      </div>
-                  </div>
-                  <div class="modal-body col-md-10 offset-md-1 col-sm-12 col-12" id="resources-body">                       
-                      <!--Title of the tour.-->
-                      <h1 id="resources-title" class="modal-title">Resources</h1>
-                      <!--Add additional content here—photos, videos, text, etc.!-->
-                      <!--Introductory text of the tour.-->
-                      <p><a href="https://www.audubon.org/birding/how-to-start-birding" target="_blank">Birding tips and tricks for beginners</a></p>
-                      <p><a href="https://merlin.allaboutbirds.org/" target="_blank">Identify bird calls with the Merlin app</a></p>
-                      <p><a href="https://ebird.org/home" target="_blank">Keep track of your checklists with eBird</a></p>
-                      <p><a href="https://lakeshorepreserve.wisc.edu/" target="_blank">Lakeshore Nature Preserve</a></p>
-                      <p><a href="https://www.bipocbirdingclub.org/birding#:~:text=Favorite%20Madison-area%20Birding%20Spots%201%2001%20%E2%80%94%20Patrick,09%20%E2%80%94%20Owen%20Conservation%20Park%20...%20More%20items" target="_blank">More Madison birding hotspots</a></p>
-                      
-                      <!--Button to start the tour.-->
-                      <button type="button" id="start" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  </div>
-              </div>
-          </div>
-      </div>    
+        <!-- Preserve Logo -->
+        <div class="splash-logo text-center mb-4">
+          <img src="img/logo.png" alt="Lakeshore Nature Preserve - University of Wisconsin" id="splash-logo">
+        </div>
 
-        <!--Navigation bar-->
-        <nav class="tour-navbar navbar navbar-expand-lg">
-          <div class="container-fluid">
-          <!--Title of the tour-->
-            <a class="navbar-brand" href="#">Lakeshore Nature Preserve Birding Tour</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          <!--Navigation menu-->
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-              <!--About button (opens the splash screen)-->
-                <li class="nav-item">
-                  <a class="nav-link about" aria-current="page" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                  <a type="button" class="nav-link about" aria-current="page" data-bs-toggle="modal" data-bs-target="#resources-modal">Resources</a>
-                </li>
-              <!--Stops button—allows users to view all the stops of the tour-->
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Stops
-                  </a>
-                  <ul class="dropdown-menu"></ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+        <!-- Title -->
+        <h1 id="splash-title" class="modal-title text-center mb-4">Lakeshore Nature Preserve Birding Tour</h1>
+
+        <p class="splash-intro">
+          Welcome to the <strong>Lakeshore Nature Preserve</strong>! This 300-acre natural area on the <strong>UW-Madison</strong> campus serves as a living classroom, supporting teaching, research, and providing a space where campus and community can connect with nature. As one of campus’ most cherished features, the preserve serves as a physical link from the campus to the lake</strong>. A renowned birding destination, the Lakeshore Nature Preserve draws birders from near and far. In 2023 alone, 211 unique bird species were observed here. This walking tour will guide you through the preserve’s diverse habitats, offering a window into the incredible biodiversity of the Lakeshore Nature Preserve</strong>.
+        </p>
+        
+
+        <!-- Intro Image -->
+        <div class="splash-image-frame">
+          <img id="splash-image" src="img/intro.png" alt="Scenic view of the Lakeshore Nature Preserve">
+        </div>
+
+        <!-- Start Button -->
+        <div class="text-center mt-4">
+          <button type="button" id="start" class="btn btn-secondary" data-bs-dismiss="modal">Start Tour</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+       <!-- Resources Modal -->
+<div class="modal" id="resources-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" id="resources-dialogue">
+    <div class="modal-content" id="resources-content">
+      <div class="modal-body resources-body">
+
+        <!-- Title -->
+        <h1 class="modal-title text-center mb-4">Resources</h1>
+
+        <!-- Resource Links -->
+        <div class="resource-links text-center">
+          <p><a href="https://www.audubon.org/birding/how-to-start-birding" target="_blank">Birding tips and tricks for beginners</a></p>
+          <p><a href="https://merlin.allaboutbirds.org/" target="_blank">Identify bird calls with the Merlin app</a></p>
+          <p><a href="https://ebird.org/home" target="_blank">Keep track of your checklists with eBird</a></p>
+          <p><a href="https://www.bipocbirdingclub.org/birding#:~:text=Favorite%20Madison-area%20Birding%20Spots%201%2001%20%E2%80%94%20Patrick,09%20%E2%80%94%20Owen%20Conservation%20Park%20...%20More%20items" target="_blank">More Madison birding hotspots</a></p>
+          <p><a href="https://www.bipocbirdingclub.org/birding#:~:text=Favorite%20Madison-area%20Birding%20Spots%201%2001%20%E2%80%94%20Patrick,09%20%E2%80%94%20Owen%20Conservation%20Park%20...%20More%20items" target="_blank">More Madison birding hotspots</a></p>
+          <p><a href="https://joeywillman.github.io/2025_GreatWisconsinBirdingTrail/" target="_blank">Great Wisconsin Nature and Birding Trail</a></p>
+          <p><a href="https://joeywillman.github.io/WisconsinAccessibleBirdingAtlas/" target="_blank">Explore accessible birding sites near Madison</a></p>
+
+        </div>
+
+        <!-- Close Button -->
+        <div class="text-center mt-4">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <!-- Themed Navigation Bar -->
+<nav class="tour-navbar navbar navbar-expand-lg">
+  <div class="container-fluid d-flex align-items-center justify-content-between px-3 py-2">
+    
+    <!-- Logo + Brand -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="img/logo.png" alt="Lakeshore Nature Preserve" id="navbar-logo" class="me-2">
+      <span class="navbar-title">Lakeshore Nature Preserve Birding Tour</span>
+    </a>
+
+    <!-- Toggler for Mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav Items -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link about" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="modal" data-bs-target="#resources-modal">Resources</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Stops
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end"></ul> <!-- Add dropdown-menu-end to right-align -->
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
 
 <!--Template for a tour stop. When users tap a stop, this screen will popup, filled with content based on the selected stop.-->
 <div class="modal" id="stop-modal">
@@ -128,12 +153,13 @@
      
         <!--Map Element-->
         <!--Replace data-basemap and data-attribution with a parameters from Leaflet providers demo: https://leaflet-extras.github.io/leaflet-providers/preview/.-->
-        <div id="map" 
-            data-basemap="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-            data-attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'>
-            <div class="stop-menu"></div>
-        </div>
-        <!--Button to center a user's location on the map.-->
+        <div id="map"
+        data-basemap="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+        data-attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>'>
+     <div class="stop-menu"></div>
+   </div>
+   
+
         <button class="location-button">Where am I?</button>
 
         <!--External scripts-->
