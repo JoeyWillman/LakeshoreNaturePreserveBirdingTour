@@ -512,16 +512,21 @@ button:hover {
     color: #2c4a32;
   }
   
-  /* Responsive Fix */
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     .navbar-title {
-      font-size: 20px;
+      font-size: 18px;
+      white-space: normal;
+      max-width: 80vw;
+      line-height: 1.2;
+      text-align: left;
     }
   
     #navbar-logo {
-      height: 40px;
+      height: 36px;
     }
   }
+  
+  
   /* Resources Modal Layout */
 #resources-dialogue {
     max-width: 700px;
@@ -646,4 +651,30 @@ button:hover {
     padding: 4px 10px;
     text-shadow: none;
   }
+  /* Responsive Navbar Title Sizing */
+@media (max-width: 768px) {
+    .navbar-title {
+      font-size: 20px;
+    }
+  }
   
+  @media (max-width: 600px) {
+    .navbar-title {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 539px) {
+    .navbar-title {
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 539px) {
+    .navbar-title {
+      font-size: 14px;
+    }
+  } @media (max-width: 465px) {
+    .navbar-title {
+      font-size: 0px;
+    }
+  }
